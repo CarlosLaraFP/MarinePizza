@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{A794F768-A6BB-4912-8027-B2420D671E47}|https">
+  <MonoDevelop.Ide.ItemProperties.MarinePizza.Shared FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.MarinePizza.Client FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MarinePizza.Server FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MarinePizza" expanded="True" selected="True">
+            <Node name="MarinePizza.Server" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
