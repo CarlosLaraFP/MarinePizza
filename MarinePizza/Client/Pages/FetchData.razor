@@ -1,14 +1,15 @@
 ﻿@page "/fetchdata"
 @using MarinePizza.Shared
+@using MarinePizza.Models
 @inject HttpClient Http
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>Marine Pizza</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1>Marine Pizza</h1>
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (pizzas == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -17,20 +18,16 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Name</th>
+                <th>IsGlutenFree</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var pizza in pizzas)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@pizza.Name</td>
+                    <td>@pizza.IsGlutenFree</td>
                 </tr>
             }
         </tbody>
@@ -38,11 +35,11 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private Pizza[]? pizzas;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
+        pizzas = await Http.GetFromJsonAsync<Pizza[]>("Pizza");
     }
 }
 

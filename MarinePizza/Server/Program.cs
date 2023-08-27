@@ -30,8 +30,11 @@ builder.Services.AddSqlite<PizzaContext>("Data Source=MarinePizza.db");
 // Add PromotionsContext
 
 // PizzaService is registered with the ASP.NET Core dependency injection system
-//builder.Services.AddScoped<PizzaService>();
 builder.Services.AddScoped<IPizzaService, PizzaService>();
+
+// Blazor dependencies
+//builder.Services.AddControllersWithViews();
+//builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -52,6 +55,10 @@ app.MapControllers();
 app.CreateDbIfNotExists();
 
 app.MapGet("/", () => @"Pizza management API. Navigate to /swagger to open the Swagger test UI.");
+
+// For Blazor
+//app.UseStaticFiles();
+//app.MapFallbackToFile("index.html");
 
 app.Run();
 

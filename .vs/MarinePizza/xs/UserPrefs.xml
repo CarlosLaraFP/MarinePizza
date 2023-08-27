@@ -1,22 +1,42 @@
-﻿<Properties StartupConfiguration="{A794F768-A6BB-4912-8027-B2420D671E47}|https">
-  <MonoDevelop.Ide.ItemProperties.MarinePizza.Shared FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.MarinePizza.Client FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+﻿<Properties StartupConfiguration="{807C9830-9BEF-464D-A65B-8C12B8B4B4A0}|https">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MarinePizza.Server FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MarinePizza.Server PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MarinePizza/Client/Pages/Index.razor">
+    <Files>
+      <File FileName="MarinePizza/Client/Pages/Index.razor" Line="2" Column="1" />
+      <File FileName="MarinePizza/Client/Pages/Counter.razor" Line="17" Column="34" />
+      <File FileName="MarinePizza/Client/Pages/FetchData.razor" Line="41" Column="6" />
+      <File FileName="MarinePizza/Server/Program.cs" Line="30" Column="25" />
+      <File FileName="MarinePizza/Shared/Pizza.cs" Line="8" Column="1" />
+      <File FileName="MarinePizza/Server/Controllers/PizzaController.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MarinePizza" expanded="True" selected="True">
-            <Node name="MarinePizza.Server" expanded="True" />
+          <Node name="MarinePizza" expanded="True">
+            <Node name="MarinePizza.Client">
+              <Node name="Pages" expanded="True" />
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+            <Node name="MarinePizza.Server">
+              <Node name="Dependencies" expanded="True">
+                <Node name="ProjectDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="MarinePizza.Shared">
+              <Node name="Models" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MarinePizza.Client PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -1,0 +1,12 @@
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/bin/Debug/net7.0/MarinePizza.Shared.deps.json
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/bin/Debug/net7.0/MarinePizza.Shared.dll
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/bin/Debug/net7.0/MarinePizza.Shared.pdb
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.csproj.AssemblyReference.cache
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.AssemblyInfoInputs.cache
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.AssemblyInfo.cs
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.csproj.CoreCompileInputs.cache
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.dll
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/refint/MarinePizza.Shared.dll
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/MarinePizza.Shared.pdb
+/Users/carloslara/Projects/MarinePizza/MarinePizza/Shared/obj/Debug/net7.0/ref/MarinePizza.Shared.dll
