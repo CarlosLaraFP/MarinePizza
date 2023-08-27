@@ -1,0 +1,26 @@
+﻿@page "/"
+@inherits PizzasBase
+
+@if (Pizzas == null)
+{
+    <h3>Loading pizzas...</h3>
+}
+else
+{
+    <h3 class="mb-5">Pizzas</h3>
+
+    @if (Pizzas.Count() > 0)
+    {
+        <ul>
+            @foreach (var pizza in Pizzas)
+            {
+                <li>
+                    <input type="checkbox" />
+                    <h4>@pizza.Name</h4>
+                    <h5>@pizza.Sauce.Name</h5>
+                    <h6>@pizza.IsGlutenFree</h6>
+                </li>
+            }
+        </ul>
+    }
+}

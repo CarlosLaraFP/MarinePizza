@@ -21,4 +21,12 @@
     <ProjectReference Include="..\Shared\MarinePizza.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Contracts\" />
+  </ItemGroup>
 </Project>

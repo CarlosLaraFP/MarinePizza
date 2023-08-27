@@ -24,12 +24,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/carloslara/Projects/MarinePizza/MarinePizza/Client/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/carloslara/Projects/MarinePizza/MarinePizza/Client/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+[/Users/carloslara/Projects/MarinePizza/MarinePizza/Client/Pages/Pizzas.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUGl6emFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/carloslara/Projects/MarinePizza/MarinePizza/Client/Pages/Todo.razor]

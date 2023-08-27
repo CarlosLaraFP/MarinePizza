@@ -5,8 +5,12 @@
 using MarinePizza.Services;
 using MarinePizza.Data;
 using MarinePizza.Interfaces;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Port 7014 or 5261 is default
+//builder.WebHost.UseUrls("http://localhost:5262");
 
 // Add services to the container.
 
@@ -44,6 +48,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(policy => policy
+    .WithOrigins("https://localhost:7015", "http://localhost:5262")
+    .AllowAnyMethod()
+    .WithHeaders(HeaderNames.ContentType)
+);
 
 app.UseHttpsRedirection();
 

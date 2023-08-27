@@ -20,7 +20,7 @@ public class PizzaService : IPizzaService
         return _context
             .Pizzas
             //.Include(p => p.Toppings)
-            //.Include(p => p.Sauce)
+            .Include(p => p.Sauce)
             .AsNoTracking() // extension method instructs EFC to disable change tracking. Because this operation is read-only, AsNoTracking can optimize performance.
             .ToList();
     }
