@@ -9,12 +9,12 @@ using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Port 7014 or 5261 is default
-//builder.WebHost.UseUrls("http://localhost:5262");
-
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
+
+//builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -24,21 +24,8 @@ builder.Services.AddSwaggerGen();
 // Defines a SQLite connection string that points to a local file, MarinePizza.db.
 builder.Services.AddSqlite<PizzaContext>("Data Source=MarinePizza.db");
 
-// Terminal: sqlite3 MarinePizza.db to open the database
-// .tables
-// .schema your_table_name
-// SELECT * FROM your_table_name;
-// .indexes your_table_name
-// .exit
-
-// Add PromotionsContext
-
 // PizzaService is registered with the ASP.NET Core dependency injection system
 builder.Services.AddScoped<IPizzaService, PizzaService>();
-
-// Blazor dependencies
-//builder.Services.AddControllersWithViews();
-//builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
@@ -47,28 +34,36 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseWebAssemblyDebugging();
+}
+else
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
-app.UseCors(policy => policy
-    .WithOrigins("https://localhost:7015", "http://localhost:5262")
-    .AllowAnyMethod()
-    .WithHeaders(HeaderNames.ContentType)
-);
+//app.UseCors(policy => policy
+//    .WithOrigins("https://localhost:7015", "http://localhost:5262")
+//    .AllowAnyMethod()
+//    .WithHeaders(HeaderNames.ContentType)
+//);
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseBlazorFrameworkFiles();
+app.UseStaticFiles();
 
+app.UseRouting();
+
+app.MapRazorPages();
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 
 // call the new extension method
 app.CreateDbIfNotExists();
 
-app.MapGet("/", () => @"Pizza management API. Navigate to /swagger to open the Swagger test UI.");
-
-// For Blazor
-//app.UseStaticFiles();
-//app.MapFallbackToFile("index.html");
+//app.MapGet("/", () => @"Pizza management API. Navigate to /swagger to open the Swagger test UI.");
 
 app.Run();
 

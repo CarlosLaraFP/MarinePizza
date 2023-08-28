@@ -199,14 +199,14 @@
       "netstandard.dll": "sha256-qjqaAEP3hdLnU\/TnoCd8HaSa+0ruV1TpdaB2GUujGMw=",
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
       "MarinePizza.Shared.dll": "sha256-ReZar7V0vfioJx2Sp4xclD0p\/ryDig7K1nCA5xVphQk=",
-      "MarinePizza.Client.dll": "sha256-Nz5CoH\/8uFfiTugwb9tVxBp3UWUV576JES2FsgsStuw="
+      "MarinePizza.Client.dll": "sha256-N2fFHSep7UTaq4pWRiHunF5ZPHiobTSwka0yqkgvyYs="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "MarinePizza.Shared.pdb": "sha256-9JLsZKugwC3OTq9u7zDH4cmlOJ\/kN1X9ZfGifZA+0t0=",
-      "MarinePizza.Client.pdb": "sha256-7TRqVFV78eBIr1wiBdbKmZKxMdk3BgUpUjZ3f9swgEM="
+      "MarinePizza.Client.pdb": "sha256-oqnSaolw\/pP3BQpa1yOxsFHoh17bPiKkZqKecy8CdcA="
     },
     "runtime": {
       "dotnet.7.0.10.hef7nl7p9e.js": "sha256-qJB30QURoyH3y3WyayHu6nMFIx2XNOkXCez7tagGpvE=",

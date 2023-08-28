@@ -1,26 +1,57 @@
 ﻿@page "/"
 @inherits PizzasBase
 
-@if (Pizzas == null)
-{
-    <h3>Loading pizzas...</h3>
-}
-else
-{
-    <h3 class="mb-5">Pizzas</h3>
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Pizzas</h3>
+        <button class="btn btn-primary" @onclick="RefreshPizzas">Refresh</button>
+    </div>
 
-    @if (Pizzas.Count() > 0)
+    @if (Pizzas == null)
     {
-        <ul>
-            @foreach (var pizza in Pizzas)
-            {
-                <li>
-                    <input type="checkbox" />
-                    <h4>@pizza.Name</h4>
-                    <h5>@pizza.Sauce.Name</h5>
-                    <h6>@pizza.IsGlutenFree</h6>
-                </li>
-            }
-        </ul>
+        <div class="text-center">
+            <h4>Loading pizzas...</h4>
+        </div>
     }
-}
+    else
+    {
+        @if (Pizzas.Count() > 0)
+        {
+            <div class="list-group">
+                @foreach (var pizza in Pizzas)
+                {
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-1">
+                                <input type="checkbox" />
+                            </div>
+                            <div class="col-2">
+                                <small class="text-muted">ID:</small> @pizza.Id
+                            </div>
+                            <div class="col-3">
+                                <strong>@pizza.Name</strong>
+                            </div>
+                            <div class="col-3">
+                                Sauce: @pizza.Sauce.Name
+                            </div>
+                            <div class="col-3">
+                                @if (pizza.IsGlutenFree)
+                                {
+                                    <span class="badge bg-success">Gluten Free</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning">Contains Gluten</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info">No pizzas found.</div>
+        }
+    }
+</div>
